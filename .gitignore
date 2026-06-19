@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+
+# Django
+db.sqlite3
+
+# Terraform
+.terraform/
+*.tfstate*
+*.tfvars
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Reports
+reports/
+
+# Environments
+.env
