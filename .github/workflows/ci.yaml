@@ -51,3 +51,7 @@ jobs:
       uses: SonarSource/sonarqube-scan-action@v5
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+    - name: Build Docker Image
+      run: |
+        docker build -t django-app:${{ github.sha }} .
