@@ -22,16 +22,20 @@
 
 # #CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 
-FROM python:3.12-slim
+FROM python:3.13-slim-bookworm
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y \
-    gcc \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get autoremove -y && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN python -m pip install --upgrade pip
 
 COPY requirements.txt .
 
