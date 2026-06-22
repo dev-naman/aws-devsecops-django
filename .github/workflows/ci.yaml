@@ -42,7 +42,7 @@ jobs:
       run: |
         pip-audit
     
-     - name: Run Semgrep
+    - name: Run Semgrep
       uses: returntocorp/semgrep-action@v1
       with:
         config: p/security-audit
