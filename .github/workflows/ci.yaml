@@ -46,3 +46,8 @@ jobs:
       uses: returntocorp/semgrep-action@v1
       with:
         config: p/security-audit
+      
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarqube-scan-action@v5
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
