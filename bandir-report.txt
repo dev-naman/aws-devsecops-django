@@ -1,0 +1,83 @@
+Run started:2026-06-22 08:55:38.905904+00:00
+
+Test results:
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'token_type'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: drf/settings.py:139:4
+138	    # "AUTH_TOKEN_CLASSES": ("rest_framework_simplejwt.tokens.AccessToken",),
+139	    "TOKEN_TYPE_CLAIM": "token_type",
+140	    # "TOKEN_USER_CLASS": "rest_framework_simplejwt.models.TokenUser",
+141	
+142	    "JTI_CLAIM": "jti",
+143	
+144	    "SLIDING_TOKEN_REFRESH_EXP_CLAIM": "refresh_exp",
+145	    "SLIDING_TOKEN_LIFETIME": timedelta(minutes=5),
+146	    "SLIDING_TOKEN_REFRESH_LIFETIME": timedelta(days=1),
+147	}
+148	# https://docs.djangoproject.com/en/5.1/topics/i18n/
+149	
+150	AUTH_USER_MODEL = 'app.UserMaster'
+151	
+152	LANGUAGE_CODE = 'en-us'
+153	
+154	TIME_ZONE = 'UTC'
+155	
+156	USE_I18N = True
+157	
+158	USE_TZ = True
+159	
+160	
+161	# Static files (CSS, JavaScript, Images)
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'refresh_exp'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: drf/settings.py:144:4
+143	
+144	    "SLIDING_TOKEN_REFRESH_EXP_CLAIM": "refresh_exp",
+145	    "SLIDING_TOKEN_LIFETIME": timedelta(minutes=5),
+146	    "SLIDING_TOKEN_REFRESH_LIFETIME": timedelta(days=1),
+147	}
+148	# https://docs.djangoproject.com/en/5.1/topics/i18n/
+149	
+150	AUTH_USER_MODEL = 'app.UserMaster'
+151	
+152	LANGUAGE_CODE = 'en-us'
+153	
+154	TIME_ZONE = 'UTC'
+155	
+156	USE_I18N = True
+157	
+158	USE_TZ = True
+159	
+160	
+161	# Static files (CSS, JavaScript, Images)
+162	# https://docs.djangoproject.com/en/5.1/howto/static-files/
+163	
+164	STATIC_URL = 'static/'
+165	
+166	# Default primary key field type
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 359
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 2
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 2
+		High: 0
+Files skipped (0):
