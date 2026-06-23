@@ -5,3 +5,7 @@ variable "aws_region" {
 variable "project_name" {
   default = "django-devsecops"
 }
+
+variable "vpc_cidr" {
+  default = "10.0.0.0/16"
+}

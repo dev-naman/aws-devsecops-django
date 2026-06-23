@@ -7,6 +7,12 @@ from .serializers import UserSerializer,AssetTrackerSerializer
 from rest_framework.permissions import IsAuthenticated,IsAdminUser
 from rest_framework_simplejwt.tokens import AccessToken,RefreshToken
 from .utils import is_owner_or_superuser
+
+from django.http import JsonResponse
+
+def health(request):
+    return JsonResponse({"status": "healthy"})
+
 class Register(APIView):
     # permission_classes = [IsAuthenticated,IsAdminUser] #Only Admin Users are allowed to perform this Action
     def get(self,request):
