@@ -1,6 +1,6 @@
 # 🚀 Production-Grade DevSecOps CI/CD Pipeline for Django on AWS ECS Fargate
 
-[![CI/CD Pipeline](https://github.com/dev-naman/aws-devsecops-django/actions/workflows/ci-cd.yml/badge.svg)](../../actions)
+[![Django DevSecOps CI/CD Pipeline](https://github.com/dev-naman/aws-devsecops-django/actions/workflows/ci-cd.yaml/badge.svg?branch=main)](https://github.com/dev-naman/aws-devsecops-django/actions/workflows/ci-cd.yaml)
 
 ## 📌 Project Overview
 
